@@ -1,0 +1,80 @@
+/*Reset*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /*margin: 0;*/
+  background-color: #1D8DC2;
+}
+
+div.container {
+  background-color: #DEE0E2;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.width-list-elements {
+  box-sizing: border-box;
+  display: block;
+  width: 25rem;
+  /*padding: 1rem;*/
+  border-radius: .5rem;
+}
+
+.text-list {
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+form {
+  box-sizing: border-box;
+}
+
+form div{
+  padding: .5rem;
+}
+
+form div:nth-last-child(1){
+  padding-top: 0;
+}
+
+form input#name-list {
+  width: 22.9rem;
+  margin: 0;
+  padding: .5rem;
+  border: none;
+  outline: 2px solid #B0BEC5;
+  background-color: rgba(144, 164, 174,.2);
+}
+
+
+
+/*Enlaces*/
+
+a {
+  background-color: rgba(36, 113, 163,.5);
+  color: #D5DBDB;
+  padding: 1rem;
+}
+
+a:hover {
+  background-color: rgba(31, 97, 141,1);
+}
+
+/*Botones*/
+div button.button {
+  background-color: #8BC34A;
+  box-sizing: border-box;
+  padding: .5rem 1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: .5rem;
+  border: none;
+}
+
+button.button:hover{
+  background-color: #689F38;
+}
