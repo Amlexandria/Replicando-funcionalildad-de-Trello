@@ -25,6 +25,8 @@ toAddAList.addEventListener("click", function(){
   saveButton.setAttribute("class","button");
   saveButton.setAttribute("type", "button");
   saveButton.innerText = "Save";
+
+
   //Añadiendo Elementos
   divform1.appendChild(inputNameOfTheList);
   divform2.appendChild(saveButton);
@@ -40,7 +42,7 @@ toAddAList.addEventListener("click", function(){
     //Creando el Div de la Lista creada
     var divList = document.createElement("div");
     divList.id = "div-of-the-List";
-    divList.className = "container width-list-elements text-list";
+    divList.className = "container width-list-elements text-list margin1rem";
 
     var innerdivList1 = document.createElement("div");
     innerdivList1.id = "div1ofTheList";
@@ -67,6 +69,7 @@ toAddAList.addEventListener("click", function(){
     contenedorDeVersiones.appendChild(divList);
     //Insertando a divList antes de divaddAListContainer
     contenedorDeVersiones.insertBefore(divList, divaddAListContainer);
+    divList.style.float = "left";
 
   });
 

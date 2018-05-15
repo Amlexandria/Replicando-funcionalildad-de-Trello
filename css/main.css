@@ -16,7 +16,7 @@ nav.principal {
 }
 
 nav#nav-interno {
-  width: 30%;
+  width: 50%;
   height: 15vh;
   background-color: #03A9F4;
   position: relative;
@@ -26,14 +26,26 @@ main {
   display: inline-block;
 }
 
-.contenedorDeVersiones {
-  display: inline-block;
+section#contenedorDeVersiones {
+  width: 100%;
+  position: relative;
+  top: 50rem;
+  border:  3px solid red;
+}
+
+.margin1rem {
+  margin: 1rem;
+}
+
+div#add-a-list-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
   background-color: #DEE0E2;
   box-sizing: border-box;
-  position: relative;
+  display: inline-block;
 }
 
 .width-list-elements {
@@ -74,6 +86,7 @@ form input#name-list {
 /*DIV NAME LIST*/
 div#div-of-the-List {
   box-sizing: border-box;
+  display: inline-block;
 }
 
 div#div-of-the-List p {
