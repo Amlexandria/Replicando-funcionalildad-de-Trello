@@ -56,7 +56,8 @@ toAddAList.addEventListener("click", function(){
 
     //Creando en enlace Add a Card...
     var linkAddACard = document.createElement("a");
-    linkAddACard.innerText = "Add a card..."
+    linkAddACard.innerText = "Add a card...";
+    linkAddACard.id = "add-a-card";
     linkAddACard.classList.add("text-list","width-list-elements");
 
 

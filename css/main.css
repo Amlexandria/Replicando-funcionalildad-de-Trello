@@ -8,29 +8,129 @@ body {
   background-color: #1D8DC2;
 }
 
+
+/*BARRA DE NAVECIÓN PRINCIPAL*/
 nav.principal {
   width: 100%;
-  height:  15vh;
+  height: 6rem;
   background-color: #2196F3;
+  box-sizing: border-box;
+  padding: 1rem;
   position: relative;
-}
-
-nav#nav-interno {
-  width: 50%;
-  height: 15vh;
-  background-color: #03A9F4;
-  position: relative;
-}
-
-main {
   display: inline-block;
 }
 
+.boards-button {
+  background-color: #A1887F;
+  box-sizing: border-box;
+  border-radius: .5rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: .9rem 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: .4rem;
+}
+
+button.boards-button i.icon-boards {
+ margin-right: 1rem;
+ font-size: 15pt;
+ font-weight: normal;
+}
+
+nav.principal input {
+  background-color: #A1887F;
+  box-sizing: border-box;
+  border-radius: .5rem;
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+  width: 22rem;
+  padding: 1rem 1.5rem;
+  background-image: url(../assets/images/search-icon.png);
+  background-repeat: no-repeat;
+  background-position: right 10%center;
+  padding-left: 10px;
+}
+
+.logo {
+  position: absolute;
+  padding: 1.3rem;
+  left: 60rem;
+  top: 0rem;
+  width: 10rem;
+  cursor: pointer;
+}
+
+a.logo img {
+  width: 100%;
+  opacity: .4;
+}
+
+.icons {
+  box-sizing: border-box;
+  padding-top: 1rem;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+}
+
+.icons a {
+  display: inline-block;
+  color: white;
+  font-size: 12pt;
+  font-size: 1.5rem;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #A1887F;
+  border-radius: .5rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 1rem;
+  margin-left: .2rem;
+  margin-right: .2rem;
+  text-align: center;
+
+}
+
+a#user-name {
+  border-radius: 10rem;
+  text-decoration: none;
+}
+
+
+main {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+
+/*BARRA DE NAVEGACION INTERNA*/
+nav#nav-interno {
+  width: 50rem;
+  height: 6rem;
+  box-sizing: border-box;
+  position: relative;
+  top: 1rem;
+  padding: 1rem;
+}
+
+nav#nav-interno a{
+  color: white;
+  text-decoration: none;
+  background-color: #03A9F4;
+  border-radius: .5rem;
+  margin-right: .3rem;
+  padding: 1rem;
+}
+
+/*SECCION CONTENEDORA DE VERSIONES*/
 section#contenedorDeVersiones {
   width: 100%;
   position: relative;
   top: 50rem;
-  border:  3px solid red;
 }
 
 .margin1rem {
@@ -101,10 +201,10 @@ div#div1ofTheList {
 }
 
 
-a {
+a#add-a-card {
   padding: 1rem;
 }
-a:hover {
+a#add-a-card:hover {
   background-color: #B0BEC5;
   text-decoration: underline;
 

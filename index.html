@@ -3,15 +3,31 @@
       <head>
         <meta charset="utf-8">
         <title>TRELLO</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Nunito|Quicksand" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
       </head>
       <body>
         <header>
-          <nav class="principal"></nav>
+          <nav class="principal">
+            <button class="boards-button text-list" type="button" name="button"><i class="fab fa-trello icon-boards"></i>Boards</button>
+            <input type="text" name="" value="">
+            <a class="logo"><img src="assets/images/trello-logo.png" alt="Trello logo"></a>
+            <div class="icons">
+              <a class="plus-icon" href="#"><i class="fas fa-plus"></i></a>
+              <a class="info-icon" href="#"><i class="fas fa-info-circle"></i></a>
+              <a class="notifications-icon" href="#"><i class="far fa-bell"></i></a>
+              <a id="user-name"href="#">AA</a>
+            </div>
+          </nav>
         </header>
-        <main id='contiene'>
-          <nav  id="nav-interno"></nav>
+        <main id='contiene' class="text-list">
+          <nav  id="nav-interno">
+            <a href="#">Lalalala</a>
+            <a href="#"><i class="far fa-star"></i></a>
+            <a href="#">Personal</a>
+            <a href="#">Private</a>
+          </nav>
           <section id="contenedor-de-versiones">
             <!--Enlace a form "Add a list"-->
             <a id="to-add-a-list" class="text-list width-list-elements margin1rem" href="#">Add a list...</a>
