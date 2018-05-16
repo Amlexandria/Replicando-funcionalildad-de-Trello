@@ -19,7 +19,7 @@ toAddAList.addEventListener("click", function(){
   inputNameOfTheList.setAttribute("autofocus", "");
 
 
-  //Creando el botón
+  //Creando el botón SAVE
   var saveButton = document.createElement("button");
   saveButton.id = "save-button";
   saveButton.setAttribute("class","button");
@@ -72,6 +72,35 @@ toAddAList.addEventListener("click", function(){
     contenedorDeVersiones.insertBefore(divList, divaddAListContainer);
     divList.style.float = "left";
 
-  });
 
-});
+
+    //EVENTO ADD A CARD...
+
+    linkAddACard.addEventListener("click",function(){
+      //Creando elementos:
+      divList.style.paddingBottom = ".7rem";
+        //Creando text tarea
+        var textArea = document.createElement("textarea");
+        textArea.classList.add("text-list", "text-area");
+        textArea.focus();
+        //Creando boton ADD
+        var addButton = document.createElement("button");
+        addButton.id = "add-button";
+        addButton.setAttribute("class","button");
+        addButton.setAttribute("type", "button");
+        addButton.innerText = "Add";
+
+      //Anadiendo Elementos:
+        divList.appendChild(textArea);
+        divList.appendChild(addButton);
+
+      //Remplazando elementos
+        divList.replaceChild(textArea,innerdivList2);
+
+    });//cierra lo que desencadena el evento LINK ADD A CARD (add tarea)
+
+  });//cierra lo que desencadena el evento SAVE BUTTON (DIVLIST)
+
+
+
+});//cierra Lo que desencadena el evento ADD A LIST (FORM)
