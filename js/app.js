@@ -27,7 +27,7 @@ toAddAList.addEventListener("click", function(){
   saveButton.setAttribute("class","button");
   saveButton.setAttribute("type", "button");
   saveButton.innerText = "Save";
-  
+
 
   //Añadiendo Elementos
   divform1.appendChild(inputNameOfTheList);
@@ -86,10 +86,11 @@ toAddAList.addEventListener("click", function(){
     //Creando elementos:
         //Creando text tarea
         var textArea = document.createElement("textarea");
+        textArea.id = "card-text-area";
         textArea.classList.add("text-list", "text-area");
         textArea.cols = "100";
         textArea.rows = "3";
-      //  textArea.focus();
+
         //Creando boton ADD
         var addButton = document.createElement("button");
         addButton.id = "add-button";
@@ -97,11 +98,11 @@ toAddAList.addEventListener("click", function(){
         addButton.setAttribute("type", "button");
         addButton.innerText = "Add";
 
-      //Anadiendo Elementos:
+    //Anadiendo Elementos:
         divList.appendChild(textArea);
         divList.appendChild(addButton);
 
-      //Remplazando elementos
+    //Remplazando elementos
         divList.replaceChild(textArea,innerdivList2);
 
 
@@ -112,7 +113,21 @@ toAddAList.addEventListener("click", function(){
         //AGREGANDO LA TAREA A PARTIR DEL EVENTO QUE DESENCADENA EL BOTÓN "Add"
 
         addButton.addEventListener("click", function(){
+          //Obteniendo el value del área de texto
           var valueOfTheTextArea = textArea.value;
+
+          //Creando el nodo de textContent
+          var cardOfTheTextArea = document.createTextNode(valueOfTheTextArea);
+
+          //Creando el div que contendrá el card agregado
+          var divCard = document.createElement("div");
+          divCard.classList.add("text-area","div-card-text-area");
+
+          //Agregando Elementos
+          divCard.appendChild(cardOfTheTextArea);
+          divList.insertBefore(divCard,textArea);
+          document.getElementById("card-text-area").value = "";
+          focusTextArea.focus();
 
 
         })
