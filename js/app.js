@@ -1,6 +1,8 @@
 var toAddAList = document.getElementById("to-add-a-list");
 var divaddAListContainer = document.getElementById("add-a-list-container");
 
+//CREANDO EL FORM A PARTIR DEL EVENTO QUE DESENCADENA EL ENLACE ¨Add a List..."
+
 toAddAList.addEventListener("click", function(){
   toAddAList.style.display = "none";
 
@@ -25,7 +27,7 @@ toAddAList.addEventListener("click", function(){
   saveButton.setAttribute("class","button");
   saveButton.setAttribute("type", "button");
   saveButton.innerText = "Save";
-
+  
 
   //Añadiendo Elementos
   divform1.appendChild(inputNameOfTheList);
@@ -36,6 +38,7 @@ toAddAList.addEventListener("click", function(){
 
 
 
+//CREANDO LA LISTA A PARTIR DEL EVENTO QUE DESENCADENA EL BOTÓN "Save"
 
 
   saveButton.addEventListener('click', function(){
@@ -51,7 +54,7 @@ toAddAList.addEventListener("click", function(){
     //Creando el parrafo que con el nombre de la Lista
     var nameOfTheList = document.createElement("p");
     nameOfTheList.textContent= inputNameOfTheList.value;
-    document.getElementById("name-list").value = "";
+
 
 
     //Creando en enlace Add a Card...
@@ -71,18 +74,22 @@ toAddAList.addEventListener("click", function(){
     //Insertando a divList antes de divaddAListContainer
     contenedorDeVersiones.insertBefore(divList, divaddAListContainer);
     divList.style.float = "left";
+    document.getElementById("name-list").value = "";
 
 
-
-    //EVENTO ADD A CARD...
+    //CREANDO LA TAREA A PARTIR DEL EVENTO QUE DESENCADENA EL LINK "Add a card..."
 
     linkAddACard.addEventListener("click",function(){
-      //Creando elementos:
-      divList.style.paddingBottom = ".7rem";
+
+      divList.style.paddingBottom = "1rem";
+
+    //Creando elementos:
         //Creando text tarea
         var textArea = document.createElement("textarea");
         textArea.classList.add("text-list", "text-area");
-        textArea.focus();
+        textArea.cols = "100";
+        textArea.rows = "3";
+      //  textArea.focus();
         //Creando boton ADD
         var addButton = document.createElement("button");
         addButton.id = "add-button";
@@ -96,6 +103,19 @@ toAddAList.addEventListener("click", function(){
 
       //Remplazando elementos
         divList.replaceChild(textArea,innerdivList2);
+
+
+        var focusTextArea = document.getElementsByClassName("text-area")[0];
+        focusTextArea.focus();
+
+
+        //AGREGANDO LA TAREA A PARTIR DEL EVENTO QUE DESENCADENA EL BOTÓN "Add"
+
+        addButton.addEventListener("click", function(){
+          var valueOfTheTextArea = textArea.value;
+
+
+        })
 
     });//cierra lo que desencadena el evento LINK ADD A CARD (add tarea)
 
