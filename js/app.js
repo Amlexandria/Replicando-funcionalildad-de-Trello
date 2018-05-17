@@ -38,105 +38,108 @@ toAddAList.addEventListener("click", function(){
 
 
 
-//CREANDO LA LISTA A PARTIR DEL EVENTO QUE DESENCADENA EL BOTÓN "Save"
+    //CREANDO LA LISTA A PARTIR DEL EVENTO QUE DESENCADENA EL BOTÓN "Save"
+
+      saveButton.addEventListener('click', function(){
+
+      //Creando elementos:
+        //Creando el Div de la Lista creada
+        var divList = document.createElement("div");
+        divList.id = "div-of-the-List";
+        divList.className = "container width-list-elements text-list margin1rem";
+        divList.style.marginTop = "0";
+
+        var innerdivList1 = document.createElement("div");
+        innerdivList1.id = "div1ofTheList";
+        var innerdivList2 = document.createElement("div");
+
+        //Creando el parrafo que con el nombre de la Lista
+        var nameOfTheList = document.createElement("p");
+        nameOfTheList.textContent= inputNameOfTheList.value;
+
+        //Creando en enlace Add a Card...
+        var linkAddACard = document.createElement("a");
+        linkAddACard.innerText = "Add a card...";
+        linkAddACard.id = "add-a-card";
+        linkAddACard.classList.add("text-list","width-list-elements");
+
+        var contenedorDeVersiones = document.getElementById("contenedor-de-versiones");
+
+        //Agregando elementos
+        innerdivList1.appendChild(nameOfTheList);
+        innerdivList2.appendChild(linkAddACard);
+        divList.appendChild(innerdivList1);
+        divList.appendChild(innerdivList2);
+        contenedorDeVersiones.appendChild(divList);
+
+        //Insertando a divList antes de divaddAListContainer
+        contenedorDeVersiones.insertBefore(divList, divaddAListContainer);
+        divList.style.float = "left";
+        document.getElementById("name-list").value = "";
 
 
-  saveButton.addEventListener('click', function(){
-    //Creando el Div de la Lista creada
-    var divList = document.createElement("div");
-    divList.id = "div-of-the-List";
-    divList.className = "container width-list-elements text-list margin1rem";
-    divList.style.marginTop = "0";
-
-    var innerdivList1 = document.createElement("div");
-    innerdivList1.id = "div1ofTheList";
-    var innerdivList2 = document.createElement("div");
-
-    //Creando el parrafo que con el nombre de la Lista
-    var nameOfTheList = document.createElement("p");
-    nameOfTheList.textContent= inputNameOfTheList.value;
 
 
+        //CREANDO LA TAREA A PARTIR DEL EVENTO QUE DESENCADENA EL LINK "Add a card..."
 
-    //Creando en enlace Add a Card...
-    var linkAddACard = document.createElement("a");
-    linkAddACard.innerText = "Add a card...";
-    linkAddACard.id = "add-a-card";
-    linkAddACard.classList.add("text-list","width-list-elements");
+          linkAddACard.addEventListener("click",function(){
 
+            divList.style.paddingBottom = "1rem";
 
-    var contenedorDeVersiones = document.getElementById("contenedor-de-versiones");
-    //Agregando elementos
-    innerdivList1.appendChild(nameOfTheList);
-    innerdivList2.appendChild(linkAddACard);
-    divList.appendChild(innerdivList1);
-    divList.appendChild(innerdivList2);
-    contenedorDeVersiones.appendChild(divList);
-    //Insertando a divList antes de divaddAListContainer
-    contenedorDeVersiones.insertBefore(divList, divaddAListContainer);
-    divList.style.float = "left";
-    document.getElementById("name-list").value = "";
+        //Creando elementos:
+            //Creando text tarea
+            var textArea = document.createElement("textarea");
+            textArea.id = "card-text-area";
+            textArea.classList.add("text-list", "text-area");
+            textArea.cols = "100";
+            textArea.rows = "3";
 
+            //Creando boton ADD
+            var addButton = document.createElement("button");
+            addButton.id = "add-button";
+            addButton.setAttribute("class","button");
+            addButton.setAttribute("type", "button");
+            addButton.innerText = "Add";
 
-    //CREANDO LA TAREA A PARTIR DEL EVENTO QUE DESENCADENA EL LINK "Add a card..."
+        //Anadiendo Elementos:
+            divList.appendChild(textArea);
+            divList.appendChild(addButton);
 
-    linkAddACard.addEventListener("click",function(){
-
-      divList.style.paddingBottom = "1rem";
-
-    //Creando elementos:
-        //Creando text tarea
-        var textArea = document.createElement("textarea");
-        textArea.id = "card-text-area";
-        textArea.classList.add("text-list", "text-area");
-        textArea.cols = "100";
-        textArea.rows = "3";
-
-        //Creando boton ADD
-        var addButton = document.createElement("button");
-        addButton.id = "add-button";
-        addButton.setAttribute("class","button");
-        addButton.setAttribute("type", "button");
-        addButton.innerText = "Add";
-
-    //Anadiendo Elementos:
-        divList.appendChild(textArea);
-        divList.appendChild(addButton);
-
-    //Remplazando elementos
-        divList.replaceChild(textArea,innerdivList2);
+        //Remplazando elementos
+            divList.replaceChild(textArea,innerdivList2);
 
 
-        var focusTextArea = document.getElementsByClassName("text-area")[0];
-        focusTextArea.focus();
+            var focusTextArea = document.getElementsByClassName("text-area")[0];
+            focusTextArea.focus();
 
 
-        //AGREGANDO LA TAREA A PARTIR DEL EVENTO QUE DESENCADENA EL BOTÓN "Add"
-
-        addButton.addEventListener("click", function(){
-          //Obteniendo el value del área de texto
-          var valueOfTheTextArea = textArea.value;
-
-          //Creando el nodo de textContent
-          var cardOfTheTextArea = document.createTextNode(valueOfTheTextArea);
-
-          //Creando el div que contendrá el card agregado
-          var divCard = document.createElement("div");
-          divCard.classList.add("text-area","div-card-text-area");
-
-          //Agregando Elementos
-          divCard.appendChild(cardOfTheTextArea);
-          divList.insertBefore(divCard,textArea);
-          document.getElementById("card-text-area").value = "";
-          focusTextArea.focus();
 
 
-        })
+            //AGREGANDO LA TAREA A PARTIR DEL EVENTO QUE DESENCADENA EL BOTÓN "Add"
 
-    });//cierra lo que desencadena el evento LINK ADD A CARD (add tarea)
+              addButton.addEventListener("click", function(){
+                //Obteniendo el value del área de texto
+                var valueOfTheTextArea = textArea.value;
 
-  });//cierra lo que desencadena el evento SAVE BUTTON (DIVLIST)
+              //Creando elementos:
+                //Creando el nodo de textContent
+                var cardOfTheTextArea = document.createTextNode(valueOfTheTextArea);
+
+                //Creando el div que contendrá el card agregado
+                var divCard = document.createElement("div");
+                divCard.classList.add("text-area","div-card-text-area");
+
+                //Agregando Elementos
+                divCard.appendChild(cardOfTheTextArea);
+                divList.insertBefore(divCard,textArea);
+                document.getElementById("card-text-area").value = "";
+                focusTextArea.focus();
 
 
+              });//cierra lo que desencadena el evento ADD BUTTON (div of the card)
+
+          });//cierra lo que desencadena el evento LINK ADD A CARD (add tarea)
+
+      });//cierra lo que desencadena el evento SAVE BUTTON (DIVLIST)
 
 });//cierra Lo que desencadena el evento ADD A LIST (FORM)

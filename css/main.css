@@ -35,6 +35,7 @@ nav.principal {
   cursor: pointer;
   margin-right: .4rem;
 }
+
 .boards-button:hover{
   background-color: #76D7C4;
 }
@@ -60,6 +61,7 @@ nav.principal input {
   background-position: right 10%center;
   padding-left: 10px;
 }
+
 nav.principal input:hover {
   background-color: #AED6F1;
 }
@@ -111,7 +113,7 @@ a#user-name {
   text-decoration: none;
 }
 
-
+/*MAIN*/
 main {
   display: inline-block;
   width: 100%;
@@ -179,7 +181,7 @@ div#add-a-list-container {
 }
 
 
-/*FORM */
+/*FORM "ADD A LIST"*/
 form {
   box-sizing: border-box;
   box-shadow: 2px 2px 5px rgba(23, 32, 42, .9);
@@ -223,13 +225,13 @@ div#div1ofTheList {
 a#add-a-card {
   padding: 1rem;
 }
+
 a#add-a-card:hover {
   background-color: #B0BEC5;
   text-decoration: underline;
 }
 
 /* ADD A CARD*/
-
 .text-area {
   box-sizing: border-box;
   width: 23rem;
@@ -253,7 +255,7 @@ button#add-button {
 }
 
 
-/*Enlaces*/
+/*ENLACES*/
 
 a#to-add-a-list {
   background-color: rgba(36, 113, 163,.5);
@@ -268,7 +270,7 @@ a#to-add-a-list:hover {
 
 
 
-/*Botones*/
+/*BOTONES*/
 div button.button {
   background-color: #8BC34A;
   box-sizing: border-box;
