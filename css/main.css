@@ -5,7 +5,10 @@ html {
 
 body {
   margin: 0;
-  background-color: #1D8DC2;
+  background-image: url("../assets/images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
 }
 
 
@@ -13,7 +16,7 @@ body {
 nav.principal {
   width: 100%;
   height: 6rem;
-  background-color: #2196F3;
+  background-color: rgba(3, 169, 244,.7);
   box-sizing: border-box;
   padding: 1rem;
   position: relative;
@@ -21,7 +24,7 @@ nav.principal {
 }
 
 .boards-button {
-  background-color: #A1887F;
+  background-color: #A9CCE3;
   box-sizing: border-box;
   border-radius: .5rem;
   border: none;
@@ -32,6 +35,9 @@ nav.principal {
   cursor: pointer;
   margin-right: .4rem;
 }
+.boards-button:hover{
+  background-color: #76D7C4;
+}
 
 button.boards-button i.icon-boards {
  margin-right: 1rem;
@@ -40,7 +46,7 @@ button.boards-button i.icon-boards {
 }
 
 nav.principal input {
-  background-color: #A1887F;
+  background-color: #A9CCE3;
   box-sizing: border-box;
   border-radius: .5rem;
   border: none;
@@ -54,6 +60,9 @@ nav.principal input {
   background-position: right 10%center;
   padding-left: 10px;
 }
+nav.principal input:hover {
+  background-color: #AED6F1;
+}
 
 .logo {
   position: absolute;
@@ -66,7 +75,7 @@ nav.principal input {
 
 a.logo img {
   width: 100%;
-  opacity: .4;
+  opacity: .7;
 }
 
 .icons {
@@ -83,7 +92,7 @@ a.logo img {
   font-size: 12pt;
   font-size: 1.5rem;
   font-family: 'Quicksand', sans-serif;
-  background-color: #A1887F;
+  background-color: #A9CCE3;
   border-radius: .5rem;
   width: 2rem;
   height: 2rem;
@@ -91,7 +100,10 @@ a.logo img {
   margin-left: .2rem;
   margin-right: .2rem;
   text-align: center;
+}
 
+.icons a:hover {
+  background-color: #76D7C4;
 }
 
 a#user-name {
@@ -120,10 +132,14 @@ nav#nav-interno {
 nav#nav-interno a{
   color: white;
   text-decoration: none;
-  background-color: #03A9F4;
+  background-color: rgba(93, 173, 226, .7);
   border-radius: .5rem;
   margin-right: .3rem;
   padding: 1rem;
+}
+
+nav#nav-interno a:hover{
+  background-color: #45B39D;
 }
 
 /*SECCION CONTENEDORA DE VERSIONES*/
@@ -166,6 +182,7 @@ div#add-a-list-container {
 /*FORM */
 form {
   box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(23, 32, 42, .9);
 }
 
 form div{
@@ -189,6 +206,7 @@ form input#name-list {
 div#div-of-the-List {
   box-sizing: border-box;
   display: inline-block;
+  box-shadow: 2px 2px 5px rgba(23, 32, 42, .9);
 }
 
 div#div-of-the-List p {
@@ -260,6 +278,7 @@ div button.button {
   border-radius: .5rem;
   border: none;
   font-weight: bold;
+  outline: none;
 }
 
 button.button:hover{

@@ -46,6 +46,7 @@ toAddAList.addEventListener("click", function(){
     var divList = document.createElement("div");
     divList.id = "div-of-the-List";
     divList.className = "container width-list-elements text-list margin1rem";
+    divList.style.marginTop = "0";
 
     var innerdivList1 = document.createElement("div");
     innerdivList1.id = "div1ofTheList";
